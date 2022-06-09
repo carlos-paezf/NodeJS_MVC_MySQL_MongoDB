@@ -46,4 +46,14 @@ npm i cors dotenv multer -S
 - `dotenv`: Manejo de variables de entorno
 - `multer`: Ayuda el manejo de carga de archivos y almacenamiento
 
-Creamos un archivo llamado `.gitignore` para ignorar los archivos que no necesitamos en nuestro repositorio.
+Creamos un archivo llamado `.gitignore` para ignorar los archivos que no necesitamos en nuestro repositorio. Por ejemplo el directorio `node_modules` y el archivo con las variables de entorno `.env` (ya sean de desarrollo o producción), no se deben publicar.
+
+```.gitignore
+node_modules/
+
+.env
+```
+
+## Documentación
+
+- [Primer encuentro con Express](DOC/01_Primer_Encuentro_Express.md)
