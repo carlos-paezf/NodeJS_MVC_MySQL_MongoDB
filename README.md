@@ -57,3 +57,4 @@ node_modules/
 ## Documentación
 
 - [Primer encuentro con Express](DOC/01_Primer_Encuentro_Express.md)
+- [Scaffolding: Estructura de nuestro proyecto](DOC/02_Scaffold.md)
