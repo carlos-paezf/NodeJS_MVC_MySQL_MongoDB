@@ -163,4 +163,4 @@ module.exports = model('tracks', TrackSchema)
 
 | Anterior                                               |                        | Siguiente                            |
 | ------------------------------------------------------ | ---------------------- | ------------------------------------ |
-| [Scaffolding: Estructura del proyecto](02_Scaffold.md) | [Readme](../README.md) | [Rutas en Node Express](03_Rutas.md) |
+| [Scaffolding: Estructura del proyecto](02_Scaffold.md) | [Readme](../README.md) | [Rutas en Node Express](04_Rutas.md) |
