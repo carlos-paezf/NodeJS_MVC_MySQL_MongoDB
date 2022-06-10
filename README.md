@@ -59,3 +59,4 @@ node_modules/
 - [Primer encuentro con Express](DOC/01_Primer_Encuentro_Express.md)
 - [Scaffolding: Estructura de nuestro proyecto](DOC/02_Scaffold.md)
 - [Mongoose y MongoDB](DOC/03_Mongoose_MongoDB.md)
+- [Rutas en Node Express](DOC/04_Rutas.md)
