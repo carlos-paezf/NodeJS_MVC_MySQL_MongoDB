@@ -14,6 +14,8 @@ const port = process.env.PORT || 4000
 app.use('/api', require('./routes'))
 
 
+console.clear()
+
 app.listen(port, () => {
     console.log(`Aplicación corriendo en http://localhost:${port}`)
 })

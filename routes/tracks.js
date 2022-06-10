@@ -1,12 +1,10 @@
 const { Router } = require('express')
+const { getItems } = require('../controllers/tracks')
 
 const router = Router()
 
 
-router.get('/', (req, res) => {
-    const data = ['Hola', 'mundo', '2']
-    res.send({ data })
-})
+router.get('/', getItems)
 
 
 module.exports = router
