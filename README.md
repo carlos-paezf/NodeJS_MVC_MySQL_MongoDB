@@ -60,3 +60,4 @@ node_modules/
 - [Scaffolding: Estructura de nuestro proyecto](DOC/02_Scaffold.md)
 - [Mongoose y MongoDB](DOC/03_Mongoose_MongoDB.md)
 - [Rutas en Node Express](DOC/04_Rutas.md)
+- [Creando alías Script](DOC/05_Scripts.md)
