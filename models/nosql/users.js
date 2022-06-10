@@ -7,7 +7,7 @@ const UserSchema = new Schema(
         age: { type: Number },
         email: {
             type: String,
-            unique: tue
+            unique: true
         },
         password: { type: String },
         role: {

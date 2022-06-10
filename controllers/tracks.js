@@ -1,10 +1,13 @@
+const { tracksModel } = require('../models')
+
+
 /**
  * Get all items
  * @param {*} req 
  * @param {*} res 
  */
-const getItems = (req, res) => {
-    const data = ['Hola', 'mundo', '2']
+const getItems = async (req, res) => {
+    const data = await tracksModel.find({})
     return res.send({ data })
 }
 
@@ -22,8 +25,10 @@ const getItem = (req, res) => {
  * @param {*} req 
  * @param {*} res 
  */
-const createItem = (req, res) => {
-
+const createItem = async (req, res) => {
+    const { body } = req
+    const data = await tracksModel.create(body)
+    return res.send({ data })
 }
 
 /**

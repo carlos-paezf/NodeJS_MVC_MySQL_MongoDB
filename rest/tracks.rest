@@ -1,1 +1,22 @@
 GET http://localhost:3000/api/tracks
+
+##########################################
+
+POST http://localhost:3000/api/tracks
+Content-Type: application/json
+
+{
+    "name": "Some track",
+    "album": "Strange",
+    "cover": "http://some.com",
+    "artist": {
+        "name": "Ferrer",
+        "nickname": "Ferrer",
+        "nationality": "CO"
+    },
+    "duration": {
+        "start": 1,
+        "end": 2 
+    },
+    "mediaId": "621e7499a1f699063f5114bc"
+}

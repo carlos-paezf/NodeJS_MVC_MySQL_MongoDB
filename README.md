@@ -62,3 +62,4 @@ node_modules/
 - [Rutas en Node Express](DOC/04_Rutas.md)
 - [Creando alías Script](DOC/05_Scripts.md)
 - [Contralores](DOC/06_Contralores.md)
+- [Cargando Modelos](DOC/07_Cargando_Modelos.md)
