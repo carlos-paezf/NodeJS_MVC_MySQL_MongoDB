@@ -1,0 +1,12 @@
+@api http://localhost:3000/api
+
+#############################################
+
+POST @api/storage
+Content-Type: multipart/form-data; boundary=WebAppBoundary
+
+--WebAppBoundary
+Content-Disposition: form-data; name="myFile"; filename="tracks.rest"
+
+< ./tracks.rest
+--WebAppBoundary--
