@@ -65,3 +65,5 @@ node_modules/
 - [Cargando Modelos](DOC/07_Cargando_Modelos.md)
 - [Archivos - Multer](DOC/08_Archivo_Multer.md)
 - [POSTMAN API Node](DOC/09_POSTMAN_API_Node.md)
+- [Como validar datos en un API REST](DOC/10_Validar_Datos_API_REST.md)
+- [Como subir un mp3](DOC/11_Como_Subir_mp3.md)
