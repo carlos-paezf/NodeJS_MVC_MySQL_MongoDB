@@ -53,6 +53,7 @@ fs.readdirSync(PATH_ROUTES).filter((file) => {
 module.exports = router
 ```
 
+___
 | Anterior                                     |                        | Siguiente                             |
 | -------------------------------------------- | ---------------------- | ------------------------------------- |
 | [Mongoose y MongoDB](03_Mongoose_MongoDB.md) | [Readme](../README.md) | [Creando alías Script](05_Scripts.md) |
