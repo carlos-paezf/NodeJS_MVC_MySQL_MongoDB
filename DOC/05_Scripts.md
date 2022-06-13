@@ -26,6 +26,7 @@ Vamos al archivo `package.json` y en la sección de scripts añadimos los siguie
 
 Con ello, si usamos el comando `npm start`, estaremos ejecutando con Node, mientas que si empleamos el comando `npm run start:dev`, entraremos en modo desarrollo con Nodemon.
 
+___
 | Anterior                             |                        | Siguiente                        |
 | ------------------------------------ | ---------------------- | -------------------------------- |
 | [Rutas en Node Express](04_Rutas.md) | [Readme](../README.md) | [Controladores](06_Controladores.md) |
