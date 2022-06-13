@@ -17,6 +17,7 @@ const getItems = (req, res) => {
 router.get('/', getItems)
 ```
 
+___
 | Anterior                              |                        | Siguiente                                  |
 | ------------------------------------- | ---------------------- | ------------------------------------------ |
 | [Creando alías Script](05_Scripts.md) | [Readme](../README.md) | [Cargando Modelos](07_Cargando_Modelos.md) |
