@@ -161,6 +161,7 @@ const TrackSchema = new Schema(
 module.exports = model('tracks', TrackSchema)
 ```
 
-| Anterior                                               |                        | Siguiente                            |
-| ------------------------------------------------------ | ---------------------- | ------------------------------------ |
+___
+| Anterior |    | Siguiente                            |
+| -------  | -- | ------------------------------------ |
 | [Scaffolding: Estructura del proyecto](02_Scaffold.md) | [Readme](../README.md) | [Rutas en Node Express](04_Rutas.md) |
