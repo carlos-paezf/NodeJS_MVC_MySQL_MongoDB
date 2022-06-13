@@ -41,6 +41,15 @@ const validatorCreateItem = [
 ]
 
 
+const validatorGetItem = [
+    check("id")
+        .exists()
+        .notEmpty()
+        .isMongoId(),
+    validateResults
+]
+
 module.exports = {
-    validatorCreateItem
+    validatorCreateItem,
+    validatorGetItem
 }

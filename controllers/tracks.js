@@ -1,4 +1,6 @@
+const { matchedData } = require('express-validator')
 const { tracksModel } = require('../models')
+const { handleHttpError } = require('../utils/handleError')
 
 
 /**
@@ -7,8 +9,13 @@ const { tracksModel } = require('../models')
  * @param {*} res 
  */
 const getItems = async (req, res) => {
-    const data = await tracksModel.find({})
-    return res.send({ data })
+    try {
+        const data = await tracksModel.find({})
+        return res.send({ data })
+    } catch (error) {
+        console.log(error)
+        handleHttpError(res, 'Error en tracks/getItems', 500)
+    }
 }
 
 /**
@@ -16,8 +23,15 @@ const getItems = async (req, res) => {
  * @param {*} req 
  * @param {*} res 
  */
-const getItem = (req, res) => {
-
+const getItem = async (req, res) => {
+    try {
+        const { id } = matchedData(req)
+        const data = await tracksModel.findById(id)
+        return res.send({ data })
+    } catch (error) {
+        console.log(error)
+        handleHttpError(res, 'Error en tracks/getItem', 500)
+    }
 }
 
 /**
@@ -26,9 +40,14 @@ const getItem = (req, res) => {
  * @param {*} res 
  */
 const createItem = async (req, res) => {
-    const { body } = req
-    const data = await tracksModel.create(body)
-    return res.send({ data })
+    try {
+        const body = matchedData(req)
+        const data = await tracksModel.create(body)
+        return res.send({ data })
+    } catch (error) {
+        console.log(error)
+        handleHttpError(res, 'Error en tracks/createItem', 500)
+    }
 }
 
 /**
@@ -36,8 +55,15 @@ const createItem = async (req, res) => {
  * @param {*} req 
  * @param {*} res 
  */
-const updateItem = (req, res) => {
-
+const updateItem = async (req, res) => {
+    try {
+        const { id, ...rest } = matchedData(req)
+        const data = await tracksModel.findOneAndUpdate(id, rest)
+        return res.send({ data })
+    } catch (error) {
+        console.log(error)
+        handleHttpError(res, 'Error en tracks/updateItem', 500)
+    }
 }
 
 /**
@@ -45,8 +71,15 @@ const updateItem = (req, res) => {
  * @param {*} req 
  * @param {*} res 
  */
-const deleteItem = (req, res) => {
-
+const deleteItem = async (req, res) => {
+    try {
+        const { id } = matchedData(req)
+        const data = await tracksModel.findByIdAndDelete(id)
+        return res.send({ data })
+    } catch (error) {
+        console.log(error)
+        handleHttpError(res, 'Error en tracks/deleteItem', 500)
+    }
 }
 
 module.exports = {
