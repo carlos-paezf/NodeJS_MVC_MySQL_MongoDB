@@ -29,6 +29,7 @@ Ejecutamos nuestro archivo con el comando:
 node app.js
 ```
 
+___
 | Anterior |                        | Siguiente                                              |
 | -------- | ---------------------- | ------------------------------------------------------ |
 |          | [Readme](../README.md) | [Scaffolding: Estructura del proyecto](02_Scaffold.md) |
