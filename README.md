@@ -67,3 +67,4 @@ node_modules/
 - [POSTMAN API Node](DOC/09_POSTMAN_API_Node.md)
 - [Como validar datos en un API REST](DOC/10_Validar_Datos_API_REST.md)
 - [Como subir un mp3](DOC/11_Como_Subir_mp3.md)
+- [Middlewares](DOC/12_Middlewares.md)
