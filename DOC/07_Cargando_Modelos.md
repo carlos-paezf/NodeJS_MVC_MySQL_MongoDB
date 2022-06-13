@@ -75,4 +75,4 @@ Cuando volvemos a enviar la data, obtenemos como respuesta la información que e
 
 | Anterior                         |                        | Siguiente                                 |
 | -------------------------------- | ---------------------- | ----------------------------------------- |
-| [Contralores](06_Contralores.md) | [Readme](../README.md) | [Archivos - Multer](08_Archivo_Multer.md) |
+| [Controladores](06_Controladores.md) | [Readme](../README.md) | [Archivos - Multer](08_Archivo_Multer.md) |
