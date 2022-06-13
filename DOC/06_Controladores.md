@@ -1,4 +1,4 @@
-# Contralores
+# Controladores
 
 El controlador de encarga de efectuar las operaciones tipo CRUD con la información que se encuentra dentro de la base de datos, es decir que contendrá la lógica central de la aplicación que puede usar el usuario.
 

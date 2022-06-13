@@ -61,7 +61,7 @@ node_modules/
 - [Mongoose y MongoDB](DOC/03_Mongoose_MongoDB.md)
 - [Rutas en Node Express](DOC/04_Rutas.md)
 - [Creando alías Script](DOC/05_Scripts.md)
-- [Contralores](DOC/06_Contralores.md)
+- [Controladores](DOC/06_Controladores.md)
 - [Cargando Modelos](DOC/07_Cargando_Modelos.md)
 - [Archivos - Multer](DOC/08_Archivo_Multer.md)
 - [POSTMAN API Node](DOC/09_POSTMAN_API_Node.md)

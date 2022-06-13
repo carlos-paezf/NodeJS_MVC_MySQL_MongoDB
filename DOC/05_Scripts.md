@@ -28,4 +28,4 @@ Con ello, si usamos el comando `npm start`, estaremos ejecutando con Node, mient
 
 | Anterior                             |                        | Siguiente                        |
 | ------------------------------------ | ---------------------- | -------------------------------- |
-| [Rutas en Node Express](04_Rutas.md) | [Readme](../README.md) | [Contralores](06_Contralores.md) |
+| [Rutas en Node Express](04_Rutas.md) | [Readme](../README.md) | [Controladores](06_Controladores.md) |
