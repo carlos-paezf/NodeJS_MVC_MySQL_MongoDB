@@ -73,6 +73,7 @@ app.use(express.json())
 
 Cuando volvemos a enviar la data, obtenemos como respuesta la información que enviamos y 3 campos más: `id`, `createdAt` y `updateAt`.
 
+___
 | Anterior                         |                        | Siguiente                                 |
 | -------------------------------- | ---------------------- | ----------------------------------------- |
 | [Controladores](06_Controladores.md) | [Readme](../README.md) | [Archivos - Multer](08_Archivo_Multer.md) |
