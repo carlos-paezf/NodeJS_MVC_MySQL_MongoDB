@@ -70,3 +70,4 @@ node_modules/
 - [Middlewares](DOC/12_Middlewares.md)
 - [Código de respuesta de encabezado](DOC/13_Codigo_Respuesta_Encabezado.md)
 - [Manejo de errores](DOC/14_Manejo_Errores.md)
+- [Soft Delete eliminación lógica](DOC/15_Soft_Delete.md)
