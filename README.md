@@ -72,3 +72,4 @@ node_modules/
 - [Manejo de errores](DOC/14_Manejo_Errores.md)
 - [Soft Delete eliminación lógica](DOC/15_Soft_Delete.md)
 - [JWT (Json Web Token)](DOC/16_JWT.md)
+- [Generar JWT en Node](DOC/17_Generar_JWT_Node.md)
