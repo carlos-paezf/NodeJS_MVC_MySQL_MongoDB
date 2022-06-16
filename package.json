@@ -26,7 +26,9 @@
         "mongoose": "^6.3.6",
         "mongoose-delete": "^0.5.4",
         "morgan-body": "^2.6.6",
-        "multer": "^1.4.5-lts.1"
+        "multer": "^1.4.5-lts.1",
+        "mysql2": "^2.3.3",
+        "sequelize": "^6.20.1"
     },
     "devDependencies": {
         "nodemon": "^2.0.16"
