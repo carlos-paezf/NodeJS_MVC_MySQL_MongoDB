@@ -3,6 +3,9 @@ const { tracksModel } = require('../models')
 const { handleHttpError } = require('../utils/handleError')
 
 
+const ENGINE_DB = process.env.ENGINE_DB
+
+
 /**
  * Get all items
  * @param {*} req 
@@ -11,7 +14,9 @@ const { handleHttpError } = require('../utils/handleError')
 const getItems = async (req, res) => {
     try {
         const { user } = req
-        const data = await tracksModel.find({})
+        const data = (ENGINE_DB === 'nosql')
+            ? await tracksModel.find({})
+            : await tracksModel.findAll()
         return res.send({ data, user })
     } catch (error) {
         console.log(error)
@@ -27,7 +32,9 @@ const getItems = async (req, res) => {
 const getItem = async (req, res) => {
     try {
         const { id } = matchedData(req)
-        const data = await tracksModel.findById(id)
+        const data = (ENGINE_DB === 'nosql')
+            ? await tracksModel.findById(id)
+            : await tracksModel.findByPk(id)
         return res.send({ data })
     } catch (error) {
         console.log(error)
@@ -59,7 +66,9 @@ const createItem = async (req, res) => {
 const updateItem = async (req, res) => {
     try {
         const { id, ...rest } = matchedData(req)
-        const data = await tracksModel.findOneAndUpdate(id, rest)
+        const data = (ENGINE_DB === 'nosql')
+            ? await tracksModel.findOneAndUpdate(id, rest)
+            : await tracksModel.update(rest, { where: { id } })
         return res.send({ data })
     } catch (error) {
         console.log(error)
@@ -75,7 +84,9 @@ const updateItem = async (req, res) => {
 const deleteItem = async (req, res) => {
     try {
         const { id } = matchedData(req)
-        const data = await tracksModel.delete({ _id: id })
+        const data = (ENGINE_DB === 'nosql')
+            ? await tracksModel.delete({ _id: id })
+            : await tracksModel.destroy({ where: { id } })
         return res.send({ data })
     } catch (error) {
         console.log(error)

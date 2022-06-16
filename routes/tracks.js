@@ -20,12 +20,12 @@ router.post(
 )
 router.put(
     '/:id',
-    [authMiddleware, checkRol(['admin', 'user']), validatorGetItem, validatorCreateItem],
+    [authMiddleware, checkRol('admin', 'user'), validatorGetItem, validatorCreateItem],
     updateItem
 )
 router.delete(
     '/:id',
-    [authMiddleware, checkRol(['admin']), validatorGetItem],
+    [authMiddleware, /* checkRol('admin'), */ validatorGetItem],
     deleteItem
 )
 

@@ -6,6 +6,7 @@ const { handleHttpError } = require('../utils/handleError')
 
 const PUBLIC_URL = process.env.PUBLIC_URL
 const MEDIA_PATH = `${__dirname}/../storage`
+const ENGINE_DB = process.env.ENGINE_DB
 
 
 /**
@@ -15,7 +16,9 @@ const MEDIA_PATH = `${__dirname}/../storage`
  */
 const getItems = async (req, res) => {
     try {
-        const data = await storagesModel.find({})
+        const data = (ENGINE_DB === 'nosql')
+            ? await storagesModel.find({})
+            : await storagesModel.findAll()
         return res.send({ data })
     } catch (error) {
         console.log(error)
@@ -31,7 +34,9 @@ const getItems = async (req, res) => {
 const getItem = async (req, res) => {
     try {
         const { id } = matchedData(req)
-        const data = await storagesModel.findById(id)
+        const data = (ENGINE_DB === 'nosql')
+            ? await storagesModel.findById(id)
+            : await storagesModel.findByPk(id)
         return res.send({ data })
     } catch (error) {
         console.log(error)
@@ -63,8 +68,12 @@ const createItem = async (req, res) => {
 const deleteItem = async (req, res) => {
     try {
         const { id } = matchedData(req)
-        const { filename } = await storagesModel.findById(id)
-        await storagesModel.findByIdAndDelete(id)
+        const { filename } = (ENGINE_DB === 'nosql')
+            ? await storagesModel.findById(id)
+            : await storagesModel.findByPk(id)
+
+        if (ENGINE_DB === 'nosql') await storagesModel.findByIdAndDelete(id)
+        else await storagesModel.destroy({ where: { id } })
 
         const filePath = `${MEDIA_PATH}/${filename}`
         fs.unlinkSync(filePath)

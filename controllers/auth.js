@@ -4,6 +4,7 @@ const { usersModel } = require('../models')
 const { tokenSign } = require('../utils/handleJwt')
 const { handleHttpError } = require('../utils/handleError')
 
+const ENGINE_DB = process.env.ENGINE_DB
 
 const register = async (req, res) => {
     try {
@@ -29,8 +30,10 @@ const register = async (req, res) => {
 const login = async (req, res) => {
     try {
         const { password, email } = matchedData(req)
-        
-        const user = await usersModel.findOne({ email }).select('password name role email')
+
+        const user = (ENGINE_DB === 'nosql')
+            ? await usersModel.findOne({ email }).select('password name role email')
+            : await usersModel.findOne({ where: { email } })
         if (!user) return handleHttpError(res, 'Correo o contraseña incorrectos', 401)
 
         const check = await compare(password, user.password)
