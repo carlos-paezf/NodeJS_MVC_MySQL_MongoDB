@@ -14,9 +14,10 @@ const ENGINE_DB = process.env.ENGINE_DB
 const getItems = async (req, res) => {
     try {
         const { user } = req
-        const data = (ENGINE_DB === 'nosql')
+        const data = await tracksModel.findAllData()
+        /* const data = (ENGINE_DB === 'nosql')
             ? await tracksModel.find({})
-            : await tracksModel.findAll()
+            : await tracksModel.findAll() */
         return res.send({ data, user })
     } catch (error) {
         console.log(error)
@@ -32,9 +33,10 @@ const getItems = async (req, res) => {
 const getItem = async (req, res) => {
     try {
         const { id } = matchedData(req)
-        const data = (ENGINE_DB === 'nosql')
+        const data = await tracksModel.findOneData(id)
+        /* const data = (ENGINE_DB === 'nosql')
             ? await tracksModel.findById(id)
-            : await tracksModel.findByPk(id)
+            : await tracksModel.findByPk(id) */
         return res.send({ data })
     } catch (error) {
         console.log(error)

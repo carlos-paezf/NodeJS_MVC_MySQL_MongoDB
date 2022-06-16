@@ -1,4 +1,4 @@
-const { Schema, model, Types } = require('mongoose')
+const { Schema, model, Types, default: mongoose } = require('mongoose')
 const mongooseDelete = require('mongoose-delete');
 
 
@@ -33,6 +33,45 @@ const TrackSchema = new Schema(
     }
 )
 
+
+TrackSchema.statics.findAllData = function () {
+    const joinData = this.aggregate([
+        {
+            $lookup: {
+                from: 'storages',
+                localField: 'mediaId',
+                foreignField: '_id',
+                as: 'audio'
+            }
+        }, 
+        {
+            $unwind: '$audio'
+        }
+    ])
+    return joinData
+}
+
+TrackSchema.statics.findOneData = function (id) {
+    const joinData = this.aggregate([
+        {
+            $lookup: {
+                from: 'storages',
+                localField: 'mediaId',
+                foreignField: '_id',
+                as: 'audio'
+            }
+        }, 
+        {
+            $unwind: '$audio'
+        },
+        {
+            $match: {
+                _id: mongoose.Types.ObjectId(id)
+            }
+        }
+    ])
+    return joinData
+}
 
 TrackSchema.plugin(mongooseDelete, { overrideMethods: 'all' })
 module.exports = model('tracks', TrackSchema)

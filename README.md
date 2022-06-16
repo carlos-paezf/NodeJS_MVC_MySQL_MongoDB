@@ -78,3 +78,4 @@ node_modules/
 - [Trazabilidad de Errores de Backend con Slack](DOC/20_Trazabilidad_errores_Slack.md)
 - [MySQL Sequelize en Node](DOC/21_MySQL_Sequelize_Node.md)
 - [Creando modelos Sequelize](DOC/22_Creando_Modelos_Sequelize.md)
+- [Aplicando métodos personalizados](DOC/23_Aplicando_Metodos_Personalizados.md)
