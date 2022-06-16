@@ -75,3 +75,4 @@ node_modules/
 - [Generar JWT en Node](DOC/17_Generar_JWT_Node.md)
 - [Login](DOC/18_Login.md)
 - [Proteger rutas con roles](DOC/19_Proteger_rutas_con_roles.md)
+- [Trazabilidad de Errores de Backend con Slack](DOC/20_Trazabilidad_errores_Slack.md)
