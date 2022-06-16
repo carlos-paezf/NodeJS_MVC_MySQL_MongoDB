@@ -16,7 +16,7 @@ const register = async (req, res) => {
         user.set('password', undefined, { strict: false })
 
         const data = {
-            token: tokenSign(user),
+            token: await tokenSign(user),
             user
         }
         return res.send({ data })
@@ -39,7 +39,7 @@ const login = async (req, res) => {
         user.set('password', undefined, { strict: false })
 
         const data = {
-            token: tokenSign(user),
+            token: await tokenSign(user),
             user
         }
 

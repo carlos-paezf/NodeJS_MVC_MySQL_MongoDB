@@ -74,3 +74,4 @@ node_modules/
 - [JWT (Json Web Token)](DOC/16_JWT.md)
 - [Generar JWT en Node](DOC/17_Generar_JWT_Node.md)
 - [Login](DOC/18_Login.md)
+- [Proteger rutas con roles](DOC/19_Proteger_rutas_con_roles.md)
