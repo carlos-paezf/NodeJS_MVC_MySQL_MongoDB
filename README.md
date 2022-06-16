@@ -73,3 +73,4 @@ node_modules/
 - [Soft Delete eliminación lógica](DOC/15_Soft_Delete.md)
 - [JWT (Json Web Token)](DOC/16_JWT.md)
 - [Generar JWT en Node](DOC/17_Generar_JWT_Node.md)
+- [Login](DOC/18_Login.md)

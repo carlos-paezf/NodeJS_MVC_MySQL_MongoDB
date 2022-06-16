@@ -45,6 +45,6 @@ const register = async (req, res) => {
 ```
 
 ___
-| Anterior                                  |                        | Siguiente |
-| ----------------------------------------- | ---------------------- | --------- |
-| [JWT (Json Web Token)](16_JWT.md) | [Readme](../README.md) | [Login y protección de rutas](18_Login_Proteccion_Rutas.md) |
+| Anterior                          |                        | Siguiente            |
+| --------------------------------- | ---------------------- | -------------------- |
+| [JWT (Json Web Token)](16_JWT.md) | [Readme](../README.md) | [Login](18_Login.md) |
