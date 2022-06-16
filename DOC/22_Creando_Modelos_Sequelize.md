@@ -222,4 +222,4 @@ const login = async (req, res) => {
 ___
 | Anterior                |                        | Siguiente                                                  |
 | ----------------------- | ---------------------- | ---------------------------------------------------------- |
-| [MySQL Sequelize en Node](21_MySQL_Sequelize_Node.md) | [Readme](../README.md) | [Aplicando métodos personalizados Sequelize](23_Aplicando_Metodos_Personalizados_Sequelize.md) |
+| [MySQL Sequelize en Node](21_MySQL_Sequelize_Node.md) | [Readme](../README.md) | [Aplicando métodos personalizados](23_Aplicando_Metodos_Personalizados.md) |
