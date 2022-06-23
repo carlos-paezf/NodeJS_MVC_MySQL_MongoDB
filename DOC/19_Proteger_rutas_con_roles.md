@@ -109,4 +109,4 @@ router.delete(
 ___
 | Anterior                |                        | Siguiente                                                  |
 | ----------------------- | ---------------------- | ---------------------------------------------------------- |
-| [Login](18_Login.md.md) | [Readme](../README.md) | [Trazabilidad de Errores de Backend con Slack](20_Trazabilidad_errores_Slack.md) |
+| [Login](18_Login.md) | [Readme](../README.md) | [Trazabilidad de Errores de Backend con Slack](20_Trazabilidad_errores_Slack.md) |
